@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies & Interests</title>
+    <link rel="stylesheet" href="hobbies.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Hobbies & Interests</h1>
+        <p>Exploring my passions and creativity.</p>
+    </section>
+
+    <div class="container">
+        <!-- Hobbies Gallery Section -->
+        <section class="image-gallery">
+            <div class="image-item">
+                <img src="src/img/webdev.jpg" alt="Web Development" onclick="openModal(this)">
+                <p>Web Development</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/drawing2.png" alt="Crafting" onclick="openModal(this)">
+                <p>Drawing</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/skate.png" alt="Skating" onclick="openModal(this)">
+                <p>Skating</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/photography2.png" alt="Photography" onclick="openModal(this)">
+                <p>Photography</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/reading.png" alt="Reading" onclick="openModal(this)">
+                <p>Reading</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/music.png" alt = "Music" onclick="openModal(this)">
+                <p>Music</p>
+            </div>
+        </section>
+    </div>
+
+    <p>
+        <a href="index.html" class="aesthetic-button">Back to Biodata</a>
+    </p>    
+
+    <!-- Modal for displaying larger images -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Amyza Apiva. All Rights Reserved.
+    </footer>
+
+    <script>
+        // JavaScript to handle modal display
+        function openModal(image) {
+            document.getElementById("imageModal").style.display = "block";
+            document.getElementById("modalImage").src = image.src;
+            document.getElementById("caption").innerText = image.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

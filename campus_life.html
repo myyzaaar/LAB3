@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Life</title>
+    <link rel="stylesheet" href="campuslife.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Campus Life</h1>
+        <p>Snapshots of my journey at university.</p>
+    </section>
+
+    <div class="container">
+        <!-- Campus Life Gallery Section -->
+        <section class="image-gallery">
+            <!-- Add 12 images with descriptions here -->
+            <div class="image-item">
+                <img src="src/img/CL1.png" alt="CSR program" onclick="openModal(this)">
+                <p>Csr program</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/CL_2.png" alt="Classmate @ CSR" onclick="openModal(this)">
+                <p>Classmate @ CSR</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/CL9.png" alt="Zapin @ Bahtera Madani 2023" onclick="openModal(this)">
+                <p>Zapin @ Bahtera Madani 2023</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/CL4.png" alt="Waiting for the bus" onclick="openModal(this)">
+                <p>waiting for the bus</p>
+            </div> <div class="image-item">
+                <img src="src/img/CL5.png" alt="final exam notes" onclick="openModal(this)">
+                <p>final exam notes</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/CL8.png" alt="Festival Seni 2324" onclick="openModal(this)">
+                <p>Festival Seni 2324</p>
+            </div> <div class="image-item">
+                <img src="src/img/CL7.png" alt="AJK SUKOL 2324" onclick="openModal(this)">
+                <p>AJK SUKOL 2324</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/CL6.png" alt="Traditional Dance Show" onclick="openModal(this)">
+                <p>Traditional Dance Show</p>
+            </div> <div class="image-item">
+                <img src="src/img/CL3.png" alt="Handball" onclick="openModal(this)">
+                <p>Handball</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/CL10.png" alt="Web Development Class" onclick="openModal(this)">
+                <p>Web Development Class</p>
+            </div> <div class="image-item">
+                <img src="src/img/CL11.png" alt="Ministry of Education Show @ JB" onclick="openModal(this)">
+                <p>Ministry of Education Show @ JB</p>
+            </div>
+            <div class="image-item">
+                <img src="src/img/CL12.png" alt="FESTIVAL TARI KEBANGSAAN 2024 @ UKM" onclick="openModal(this)">
+                <p>FESTIVAL TARI KEBANGSAAN 2024 @ UKM</p>
+            </div>
+            <!-- Repeat for other images... -->
+        </section>
+    </div>
+
+    <!-- Back Button -->
+    <p>
+        <a href="index.html" class="aesthetic-button">Back to Biodata</a>
+    </p>
+    
+    <!-- Modal for displaying larger images -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Amyza Apiva. All Rights Reserved.
+    </footer>
+
+    <script>
+        // JavaScript to handle modal display
+        function openModal(image) {
+            document.getElementById("imageModal").style.display = "block";
+            document.getElementById("modalImage").src = image.src;
+            document.getElementById("caption").innerText = image.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
